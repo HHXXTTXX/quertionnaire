@@ -77,44 +77,12 @@ module.exports.routes = {
               title:'male'
             },
             {
-              key: 2,
+              key: 1,
               title:'female'
             } 
           ]
         }
-      ],
-      question1: {
-        title:'1.your sex is?', 
-        options: {title:'', target:''}
-      },
-      choice1 : [
-        {answer: 'male'},
-        {answer: 'female'}
-      ],
-      question2: {
-        title:'2.your sex is?', 
-        options: {title:'', target:''}
-      },
-      choice2 : [
-        {answer: 'male'},
-        {answer: 'female'}
-      ],
-      question3: {
-        title:'3.your sex is?', 
-        options: {title:'', target:''}
-      },
-      choice3 : [
-        {answer: 'male'},
-        {answer: 'female'}
-      ],
-      question4: {
-        title:'4.your sex is?', 
-        options: {title:'', target:''}
-      },
-      choice4 : [
-        {answer: 'male'},
-        {answer: 'female'}
-      ],
+      ]
     }
   }
   /***************************************************************************
