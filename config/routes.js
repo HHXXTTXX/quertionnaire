@@ -70,7 +70,7 @@ module.exports.routes = {
           ]
         },
         {
-          title:'1.your sex is?',
+          title:'3.your sex is?',
           answer:[
             {
               key: 1,
