@@ -9,7 +9,9 @@
     document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
   }, 0);
   function show(){
-    alert("<%= questions[0].title%>");
+    var title = "<%= questions[1].title%>";
+    document.getElementById('question').innerHTML=title;
+    alert(title);
   }
   </script>
   <div class="default-page">
@@ -19,9 +21,9 @@
     <div class="main container clearfix">
       <form class="c1">
         <% _.each(questions, function (questions) { %>
-          <h3 class="c1"><%= questions.title%></h3><br>
+          <h3 id="question"><%= questions.title%></h3><br>
           <% _.each(questions.answer, function (answer) { %>
-          <input class="c1" type="radio" name="<%= questions.title%>" onchange="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
+          <input id="choice" type="radio" name="<%= questions.title%>" onchange="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
           <% }) %>
         <% }) %>
       </form>

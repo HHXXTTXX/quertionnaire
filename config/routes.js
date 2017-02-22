@@ -57,16 +57,20 @@ module.exports.routes = {
           ]
         },
         {
-          title:'2.your sexy is?',
+          title:'2.your age is?',
           answer:[
             {
               key: 1,
-              title:'male'
+              title:'21~25'
             },
             {
               key: 2,
-              title:'female'
-            } 
+              title:'25~30'
+            },
+            {
+              key: 2,
+              title:'>30'
+            }  
           ]
         },
         {
