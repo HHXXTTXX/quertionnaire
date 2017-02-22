@@ -47,8 +47,8 @@ module.exports.routes = {
         options: {title:'', target:''}
       },
       choice1 : [
-        {answer: 'male'},
-        {answer: 'female'}
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
       ],
       question2: {
         title:'2.your sex is?', 
