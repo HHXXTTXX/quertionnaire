@@ -42,47 +42,6 @@ module.exports.routes = {
     view: 'question',
     locals: {
       layout: 'question',
-      questions:[
-        {
-          title:'1.your sex is?',
-          answer:[
-            {
-              key: 1,
-              title:'male'
-            },
-            {
-              key: 2,
-              title:'female'
-            } 
-          ]
-        },
-        {
-          title:'2.your sex is?',
-          answer:[
-            {
-              key: 1,
-              title:'male'
-            },
-            {
-              key: 2,
-              title:'female'
-            } 
-          ]
-        },
-        {
-          title:'1.your sex is?',
-          answer:[
-            {
-              key: 1,
-              title:'male'
-            },
-            {
-              key: 2,
-              title:'female'
-            } 
-          ]
-        }
-      ],
       question1: {
         title:'1.your sex is?', 
         options: {title:'', target:''}
