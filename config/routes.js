@@ -44,7 +44,7 @@ module.exports.routes = {
       layout: 'question',
       questions:[
         {
-          title:'1.your sex is?',
+          title:'1.your sexy is?',
           answer:[
             {
               key: 1,
@@ -57,7 +57,7 @@ module.exports.routes = {
           ]
         },
         {
-          title:'2.your sex is?',
+          title:'2.your sexy is?',
           answer:[
             {
               key: 1,
@@ -70,7 +70,7 @@ module.exports.routes = {
           ]
         },
         {
-          title:'3.your sex is?',
+          title:'3.your sexy is?',
           answer:[
             {
               key: 1,

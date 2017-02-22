@@ -9,7 +9,7 @@
     document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
   }, 0);
   function show(){
-    doucument.getElemetsByClassNmae("form.c1").style.display="none";
+    alert("<%= questions[0].title%>");
   }
   </script>
   <div class="default-page">
@@ -21,7 +21,7 @@
         <% _.each(questions, function (questions) { %>
           <h3 class="c1"><%= questions.title%></h3><br>
           <% _.each(questions.answer, function (answer) { %>
-          <input class="c1" type="radio" name="<%= questions.title%>" checked="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
+          <input class="c1" type="radio" name="<%= questions.title%>" onchange="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
           <% }) %>
         <% }) %>
       </form>
