@@ -19,11 +19,16 @@
       <h1 id="main-title" class="container" align="center"><%= __('问卷调查') %></h1>
     </div>
     <div class="main container clearfix">
+      <form id="usermessage">
+        姓名：<input id="userName" type="text" onchange="">&nbsp&nbsp&nbsp&nbsp
+        联系方式：<input id="tel" type="number" onchange="">
+      </form>
+      <hr>
       <form class="c1">
         <% _.each(questions, function (questions) { %>
           <h3 id="question"><%= questions.title%></h3><br>
           <% _.each(questions.answer, function (answer) { %>
-          <input id="choice" type="radio" name="<%= questions.title%>" onchange="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
+          <input id="choice" type="radio" name="<%= questions.title%>" onchange="show()" value="<%= answer.key %>"><%= answer.title %><br><br>
           <% }) %>
         <% }) %>
       </form>
