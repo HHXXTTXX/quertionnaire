@@ -43,7 +43,7 @@ module.exports.routes = {
     locals: {
       layout: 'question',
       question1: {
-        title:'1.your sex is?', 
+        title:'1.your sexy is?', 
         options: {title:'', target:''}
       },
       choice1 : [
@@ -51,28 +51,76 @@ module.exports.routes = {
         {answer: 'female', key: "1"}
       ],
       question2: {
-        title:'2.your sex is?', 
+        title:'2.your age is?', 
         options: {title:'', target:''}
       },
       choice2 : [
-        {answer: 'male'},
-        {answer: 'female'}
+        {answer: '20~25', key: "1"},
+        {answer: '25~30', key: "1"}
       ],
       question3: {
-        title:'3.your sex is?', 
+        title:'3.your sexy is?', 
         options: {title:'', target:''}
       },
       choice3 : [
-        {answer: 'male'},
-        {answer: 'female'}
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
       ],
       question4: {
-        title:'4.your sex is?', 
+        title:'4.your sexy is?', 
         options: {title:'', target:''}
       },
       choice4 : [
-        {answer: 'male'},
-        {answer: 'female'}
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+      question5: {
+        title:'5.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice5: [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+      question6: {
+        title:'6.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice6 : [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+      question7: {
+        title:'7.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice7 : [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+      question8: {
+        title:'8.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice8 : [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+      question9: {
+        title:'9.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice9 : [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
+      ],
+       question10: {
+        title:'10.your sexy is?', 
+        options: {title:'', target:''}
+      },
+      choice10 : [
+        {answer: 'male', key: "1"},
+        {answer: 'female', key: "1"}
       ],
     }
   }
