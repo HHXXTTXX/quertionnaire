@@ -21,7 +21,7 @@
         <% _.each(questions, function (questions) { %>
           <h3 class="c1"><%= questions.title%></h3><br>
           <% _.each(questions.answer, function (answer) { %>
-          <input class="c1" type="radio" name="q1" checked="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
+          <input class="c1" type="radio" name="<%= questions.title%>" checked="show()" value="<%= answer.key %>"><%= answer.title %></input><br><br>
           <% }) %>
         <% }) %>
       </form>
