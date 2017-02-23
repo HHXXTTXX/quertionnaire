@@ -45,16 +45,16 @@
     <div class="header">
       <h1 id="main-title" class="container" align="center"><%= __('问卷调查') %></h1>
     </div>
-    <div align="center">
-     <form id="usermessage" >
-        姓名：<input id="userName" type="text" onchange="">&nbsp&nbsp&nbsp&nbsp
-        联系方式：<input id="tel" type="number" onchange="">
-      </form>
-    </div>
-    <hr>
     <div class="main container clearfix">
       <!-- <h1>Getting started</h1>
       <p>Don't worry, we've got your back.</p> -->
+      <div align="center">
+       <form id="usermessage">
+        姓名：<input id="userName" type="text" onchange="">&nbsp&nbsp&nbsp&nbsp
+        联系方式：<input id="tel" type="number" onchange="">
+       </form>
+      </div>
+      <hr>
       <form id="1">
         <h2 id="q1"><%= question1.title%></h2><br>
         <% _.each(question1.options, function (options) { %>

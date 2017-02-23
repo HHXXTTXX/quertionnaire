@@ -58,10 +58,10 @@ module.exports.routes = {
           ]
       },
       question3: {
-        title:'3.your sexy is?', 
+        title:'3.是否拥有github账号', 
         options:[           
-          {title:'male', target:''},           
-          {title:'male', target:''}           
+          {title:'是', target:''},           
+          {title:'否', target:''}           
           ]
       },
       
