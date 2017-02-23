@@ -44,84 +44,83 @@ module.exports.routes = {
       layout: 'question',
       question1: {
         title:'1.your sexy is?', 
-        options: {title:'', target:''}
+        options:[
+          {title:'male', target:''},
+          {title:'female', target:''}
+          ]
       },
-      choice1 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
       question2: {
         title:'2.your age is?', 
-        options: {title:'', target:''}
+        options: [
+          {title: '20~25', target: "1"},
+          {title: '25~30', target: "2"},
+          {title: '30以上', target: "3"}
+          ]
       },
-      choice2 : [
-        {answer: '20~25', key: "1"},
-        {answer: '25~30', key: "1"}
-      ],
       question3: {
         title:'3.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice3 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+      
       question4: {
         title:'4.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice4 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+     
       question5: {
         title:'5.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice5: [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+      
       question6: {
         title:'6.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice6 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+     
       question7: {
         title:'7.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice7 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+      
       question8: {
         title:'8.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice8 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+     
       question9: {
         title:'9.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice9 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+     
        question10: {
         title:'10.your sexy is?', 
-        options: {title:'', target:''}
+        options:[           
+          {title:'male', target:''},           
+          {title:'male', target:''}           
+          ]
       },
-      choice10 : [
-        {answer: 'male', key: "1"},
-        {answer: 'female', key: "1"}
-      ],
+      
     }
   }
   /***************************************************************************
