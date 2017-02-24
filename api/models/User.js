@@ -6,6 +6,10 @@ module.exports = {
 
     tel:{
       type: 'string'
+    },
+    
+    email:{
+      type: 'string'
     }
   }
 }

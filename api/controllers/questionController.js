@@ -8,10 +8,10 @@ module.exports = {
         tel:''
       },
       question1: {
-        title:'1.your sexy is?', 
+        title:'1.your sex is?', 
         options:[
-          {title:'male', target:'2', val: 1},
-          {title:'female', target:'2', val: 1}
+          {title:'male', target:'10', val: 1},
+          {title:'female', target:'10', val: 1}
           ]
       },
       question2: {
@@ -31,7 +31,7 @@ module.exports = {
       },
       
       question4: {
-        title:'4.your sexy is?', 
+        title:'4.your sex is?', 
         options:[           
           {title:'male', target:'7', val: 1},           
           {title:'male', target:'8', val: 1}           
@@ -39,7 +39,7 @@ module.exports = {
       },
      
       question5: {
-        title:'5.your sexy is?', 
+        title:'5.your sex is?', 
         options:[           
           {title:'male', target:'6', val: 1},           
           {title:'male', target:'9', val: 1}           
@@ -47,7 +47,7 @@ module.exports = {
       },
       
       question6: {
-        title:'6.your sexy is?', 
+        title:'6.your sex is?', 
         options:[           
           {title:'male', target:'10', val: 1},           
           {title:'male', target:'8', val: 1}           
@@ -55,7 +55,7 @@ module.exports = {
       },
      
       question7: {
-        title:'7.your sexy is?', 
+        title:'7.your sex is?', 
         options:[           
           {title:'male', target:'8', val: 1},           
           {title:'male', target:'9', val: 1}           
@@ -63,7 +63,7 @@ module.exports = {
       },
       
       question8: {
-        title:'8.your sexy is?', 
+        title:'8.your sex is?', 
         options:[           
           {title:'male', target:'9', val: 1},           
           {title:'male', target:'10', val: 1}           
@@ -71,7 +71,7 @@ module.exports = {
       },
      
       question9: {
-        title:'9.your sexy is?', 
+        title:'9.your sex is?', 
         options:[           
           {title:'male', target:'10', val: 1},           
           {title:'male', target:'10', val: 1}           
@@ -79,31 +79,32 @@ module.exports = {
       },
      
        question10: {
-        title:'10.your sexy is?', 
+        title:'10.your sex is?', 
         options:[           
-          {title:'male', target:'', val: 1},           
-          {title:'male', target:'', val: 1}           
+          {title:'male', target:'50', val: 1},           
+          {title:'male', target:'50', val: 1}           
           ]
       },
     });
-    var num =_.sum(_.drop(_.values(req.query), 2));
+    var num =_.sum(_.dropRight(_.values(req.query), 3));
     var name = req.query.userName;
     var tel = req.query.tel;
+    var email = req.query.email;
     sails.log.debug(req.query,num);
-    if(num > 5){
-      User.findOne({name: name, tel: tel})
+    if(num > 1){
+      User.findOne({name: name, tel: tel, email: email})
       .exec(function(err, user){
         sails.log.debug(user);
         if(user){
           return 
         }else{
-          User.create({name: name, tel: tel})
+          User.create({name: name, tel: tel, email: email})
           .exec(function(err, data){
             if(err){
               return res.serverError(err);
             }
             sails.log.info('create success');
-            return
+            return res.ok();
           })
         }
       })
