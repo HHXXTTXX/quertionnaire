@@ -38,57 +38,7 @@ module.exports.routes = {
       name: '123'
     }
   },
-  'get /question': {
-    view: 'question',
-    locals: {
-      layout: 'question',
-      questions:[
-        {
-          title:'1.your sex is?',
-          answer:[
-            {
-              key: 1,
-              title:'male'
-            },
-            {
-              key: 2,
-              title:'female'
-            } 
-          ]
-        },
-        {
-          title:'2.your age is?',
-          answer:[
-            {
-              key: 1,
-              title:'21~25'
-            },
-            {
-              key: 2,
-              title:'25~30'
-            },
-            {
-              key: 2,
-              title:'>30'
-            }  
-          ]
-        },
-        {
-          title:'3.your sex is?',
-          answer:[
-            {
-              key: 1,
-              title:'male'
-            },
-            {
-              key: 1,
-              title:'female'
-            } 
-          ]
-        }
-      ]
-    }
-  }
+  'get /question': 'questionController.question'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
