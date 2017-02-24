@@ -26,95 +26,104 @@
   setTimeout(function sunrise () {
     document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
   }, 0);
-   var i = 1, q = 1;
-  function show(p) {
-    if(i == q){
-      i++
-      q++;
-      if(p == null){
-        var p = 0;
-      }
+  function show(p, a) {
+   
       setTimeout(function change(){
-        document.getElementById(i-1).style="display:none";
-        document.getElementById(q+p).style="display:";
+        document.getElementById(a).style="display:none";
+        document.getElementById(p).style="display:";
       },500)
-    }
+   
   }
+  // function myFunction(){
+  //   var name = document.getElementById("userName").value;
+  //   var tel = document.getElementById("tel").value;
+  //   submitOK = "true";
+  //   if (name.length>10 || !name) {
+  //       submitOK = "false";
+  //   } 
+  //   if (isNaN(tel)||tel<1||tel>13) {
+  //       submitOK = "false";
+  //   }
+  //    if (submitOK=="false") {
+  //       return false;
+  //   }
+  //   alert(name)
+  // }
   </script>
   <div class="default-page">
     <div class="header">
       <h1 id="main-title" class="container" align="center"><%= __('问卷调查') %></h1>
     </div>
+    <form id="test" onsubmit="return myFunction()">
+    
     <div class="main container clearfix">
-      <!-- <h1>Getting started</h1>
-      <p>Don't worry, we've got your back.</p> -->
       <div align="center">
-       <form id="usermessage">
-        姓名：<input id="userName" type="text" onchange="">&nbsp&nbsp&nbsp&nbsp
-        联系方式：<input id="tel" type="number" onchange="">
-       </form>
+          姓名：<input id="userName" type="text" value="">&nbsp&nbsp&nbsp&nbsp
+          联系方式：<input id="tel" type="text" value="">
       </div>
+      <br>
       <hr>
-      <form id="1">
+      <div id="1">
         <h2 id="q1"><%= question1.title%></h2><br>
         <% _.each(question1.options, function (options) { %>
-        <input  type="radio" name="q1" onchange="show()" value="<%= options.key %>"> <%= options.title %></input><br><br>
+        <input  type="radio" name="q1" onchange="show(<%= options.target %>, 1)" value="<%= options.val %>""> <%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="2" style="display:none">
+      </div>
+      <div id="2" style="display:none">
         <h2><%= question2.title%></h2><br>
         <% _.each(question2.options, function (options) { %>
-        <input type="radio" name="q2" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q2" onchange="show(<%= options.target %>, 2)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="3" style="display:none">
+      </div>
+      <div id="3" style="display:none">
         <h2><%= question3.title%></h2><br>
         <% _.each(question3.options, function (options) { %>
-        <input type="radio" name="q3" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q3" onchange="show(<%= options.target %>, 3)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="4" style="display:none">
+      </div>
+      <div id="4" style="display:none">
         <h2 ><%= question4.title%></h2><br>
         <% _.each(question4.options, function (options) { %>
-        <input type="radio" name="q4" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q4" onchange="show(<%= options.target %>, 4)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="5" style="display:none">
+      </div>
+     <div id="5" style="display:none">
         <h2><%= question5.title%></h2><br>
         <% _.each(question5.options, function (options) { %>
-        <input type="radio" name="q5" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q5" onchange="show(<%= options.target %>, 5)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="6" style="display:none">
+      </div>
+      <div id="6" style="display:none">
         <h2><%= question6.title%></h2><br>
         <% _.each(question6.options, function (options) { %>
-        <input type="radio" name="q6" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q6" onchange="show(<%= options.target %>, 6)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="7" style="display:none">
+      </div>
+     <div id="7" style="display:none">
         <h2><%= question7.title%></h2><br>
         <% _.each(question7.options, function (options) { %>
-        <input type="radio" name="q7" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q7" onchange="show(<%= options.target %>, 7)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="8" style="display:none">
+      </div>
+     <div id="8" style="display:none">
         <h2><%= question8.title%></h2><br>
         <% _.each(question8.options, function (options) { %>
-        <input type="radio" name="q8" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q8" onchange="show(<%= options.target %>, 8)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="9" style="display:none">
+      </div>
+      <div id="9" style="display:none">
         <h2><%= question9.title%></h2><br>
         <% _.each(question9.options, function (options) { %>
-        <input type="radio" name="q9" onchange="show()" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q9" onchange="show(<%= options.target %>, 9)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-      </form>
-      <form id="10" style="display:none">
+      </div>
+      <div id="10" style="display:none">
         <h2><%= question10.title%></h2><br>
         <% _.each(question10.options, function (options) { %>
-        <input type="radio" name="q10" onchange="" value="<%= options.key %>"><%= options.title %></input><br><br>
+        <input type="radio" name="q10" onchange="show(<%= options.target %>, 10)" value="<%= options.val %>""><%= options.title %></input><br><br>
         <% }) %>
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" id="submit">
+      </div>
       </form>
     </div>
   </div>
