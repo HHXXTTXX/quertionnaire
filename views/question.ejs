@@ -23,11 +23,11 @@
     div.main-form{margin-left: auto;margin-right: auto;width:80%;}
     div.usermessage{margin-left: 25%;margin-top: 1cm;}
     div.question-title{margin-left: 40%;margin-top: 5%;}
-    div.test{margin-left: 40%;margin-top: 5%;}
+    div.test{margin-left: 0%;margin-top: 5%;}
     .submit{padding: 10px 10px}
-    label.test{position:absolute;right:65%;background-color:#b0e0e6;}
-    input.test{position:absolute;right:50%;}
-    .submit{position:absolute;right:50%;}
+    label.test{position:absolute;right:60%;}
+    input.test{position:absolute;right:45%;}
+    .submit{position:absolute;right:49%;}
   </style>
   <script type="text/javascript">
   setTimeout(function sunrise () {
@@ -45,7 +45,7 @@
     submitOK = "true";
     if (name.length>10 || !name) {
         submitOK = "false";
-    } 
+    }
     if (isNaN(tel)||!tel == 11) {
         submitOK = "false";
     }
@@ -59,7 +59,7 @@
     <div class="header">
       <h1 id="main-title" class="container"><%= __('问卷调查') %></h1>
     </div>
-    <form id="form1" onsubmit="return myFunction()" action="/question">
+    <form id="form1" onsubmit="myFunction()" action="/question">
       <div class="main-form">
         <span>
           <p>
@@ -70,7 +70,7 @@
         <hr>
         <div class="main">
           <div id="1" class="question-title">
-            <h2 id="q1"><%= question1.title%></h2><br>
+            <h2 id="second-title"><%= question1.title%></h2><br>
             <% _.each(question1.options, function (options) { %>
             <input  type="radio" name="q1" onchange="show(<%= options.target %>, 1)" value="<%= options.val %>">  <label><%= options.title %></label><br><br>
             <% }) %>
@@ -130,9 +130,9 @@
             <% }) %>
           </div>
           <div id="50" class="usermessage" style="display:none" class="test">
-            <label class="test">姓名：</label><input class="test" name="userName" type="text" value="" maxlength="20"><br><br>
-            <label class="test">email: </label><input class="test" name="email" type="email" value="" maxlength="50"><br><br>
-            <label class="test">联系电话：</label><input class="test" name="tel" type="text" value="" maxlength="11">
+            <label class="test">姓名:</label><input class="test" name="userName" type="text" value="" maxlength="20"><br><br>
+            <label class="test">email:</label><input class="test" name="email" type="email" value="" maxlength="50"><br><br>
+            <label class="test">联系电话:</label><input class="test" name="tel" type="text" value="" maxlength="11">
             <div class="submit">
               <br>
               <input class="submit" type="submit" value="提交" id="submit" >
