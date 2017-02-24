@@ -1,18 +1,6 @@
 var _ = require("lodash");
 module.exports = {
   question: function(req, res, next){
-     var num =_.sum(_.values(req.query));
-    sails.log.debug(req.query,num);
-    if(num > 5){
-      User.create({name: '1', tel: '123456789'})
-      .exec((err, data) => {
-        if(err){
-          return res.serverError(err);
-        }
-        sails.log.info('create success');
-        return res.ok();
-      })
-    }
     res.view('question', {
       layout: 'question',
       user:{
@@ -97,6 +85,28 @@ module.exports = {
           {title:'male', target:'', val: 1}           
           ]
       },
-    })
+    });
+    var num =_.sum(_.drop(_.values(req.query), 2));
+    var name = req.query.userName;
+    var tel = req.query.tel;
+    sails.log.debug(req.query,num);
+    if(num > 5){
+      User.findOne({name: name, tel: tel})
+      .exec(function(err, user){
+        sails.log.debug(user);
+        if(user){
+          return 
+        }else{
+          User.create({name: name, tel: tel})
+          .exec(function(err, data){
+            if(err){
+              return res.serverError(err);
+            }
+            sails.log.info('create success');
+            return
+          })
+        }
+      })
+    }
   },
 }
