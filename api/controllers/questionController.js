@@ -10,8 +10,8 @@ module.exports = {
       question1: {
         title:'1.your sex is?', 
         options:[
-          {title:'male', target:'10', val: 1},
-          {title:'female', target:'10', val: 1}
+          {title:'male', target:'50', val: 1},
+          {title:'female', target:'50', val: 1}
           ]
       },
       question2: {

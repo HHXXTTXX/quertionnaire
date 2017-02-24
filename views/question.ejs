@@ -22,7 +22,12 @@
     div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 50%}
     div.main-form{margin-left: auto;margin-right: auto;width:80%;}
     div.usermessage{margin-left: 25%;margin-top: 1cm;}
-    div.question-title{margin-left: 40%;margin-top: 10%;}
+    div.question-title{margin-left: 40%;margin-top: 5%;}
+    div.test{margin-left: 40%;margin-top: 5%;}
+    .submit{padding: 10px 10px}
+    label.test{position:absolute;right:65%;background-color:#b0e0e6;}
+    input.test{position:absolute;right:50%;}
+    .submit{position:absolute;right:50%;}
   </style>
   <script type="text/javascript">
   setTimeout(function sunrise () {
@@ -124,12 +129,13 @@
             <input type="radio" name="q10" onchange="show(<%= options.target %>, 10)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
-          <div id="50" class="usermessage" style="display:none">
-            <label>姓名：</label><input name="userName" type="text" value="" maxlength="20"><br><br>
-            <label>email: </label><input name="email" type="email" value="" maxlength="50"><br><br>
-            <label>联系电话：</label><input name="tel" type="text" value="" maxlength="11">
+          <div id="50" class="usermessage" style="display:none" class="test">
+            <label class="test">姓名：</label><input class="test" name="userName" type="text" value="" maxlength="20"><br><br>
+            <label class="test">email: </label><input class="test" name="email" type="email" value="" maxlength="50"><br><br>
+            <label class="test">联系电话：</label><input class="test" name="tel" type="text" value="" maxlength="11">
             <div class="submit">
-              <input type="submit" value="提交" id="submit" >
+              <br>
+              <input class="submit" type="submit" value="提交" id="submit" >
             </div>
           </div>
         </div>
