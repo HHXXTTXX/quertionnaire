@@ -39,6 +39,7 @@ module.exports.routes = {
     }
   },
   'get /question': 'questionController.question',
+  'get /middlepage' : 'questionController.middlepage'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

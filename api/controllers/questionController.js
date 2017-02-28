@@ -8,14 +8,14 @@ module.exports = {
         tel:''
       },
       question1: {
-        title:'1.your sex is?', 
+        title:'1.你的性别是?', 
         options:[
-          {title:'male', target:'50', val: 2},
-          {title:'female', target:'2', val: 2}
+          {title:'男', target:'2', val: 2},
+          {title:'女', target:'2', val: 2}
           ]
       },
       question2: {
-        title:'2.your age is?', 
+        title:'2.你的年龄?', 
         options: [
           {title: '20~25', target: "3", val: 1},
           {title: '25~30', target: "3", val: 1},
@@ -29,60 +29,55 @@ module.exports = {
           {title:'否', target:'5', val: 1}           
           ]
       },
-      
       question4: {
-        title:'4.your sex is?', 
+        title:'4.遇到问题的解决方法?', 
         options:[           
-          {title:'male', target:'7', val: 1},           
-          {title:'male', target:'8', val: 1}           
+          {title:'百度', target:'7', val: -1},           
+          {title:'必应', target:'8', val: 1},
+          {title:'google', target:'8', val: 2}           
           ]
       },
-     
       question5: {
-        title:'5.your sex is?', 
+        title:'5.是否有过相关工作经验?', 
         options:[           
-          {title:'male', target:'6', val: 1},           
-          {title:'male', target:'9', val: 1}           
+          {title:'有', target:'6', val: 1},           
+          {title:'没有', target:'9', val: 1}           
           ]
       },
-      
       question6: {
-        title:'6.your sex is?', 
+        title:'6.?', 
         options:[           
-          {title:'male', target:'10', val: 1},           
-          {title:'male', target:'8', val: 1}           
+          {title:'选项', target:'10', val: 1},           
+          {title:'选项', target:'8', val: 1}           
           ]
       },
-     
       question7: {
-        title:'7.your sex is?', 
+        title:'7.问题?', 
         options:[           
-          {title:'male', target:'8', val: 1},           
-          {title:'male', target:'9', val: 1}           
+          {title:'选项', target:'8', val: 1},           
+          {title:'选项', target:'9', val: 1}           
           ]
       },
-      
       question8: {
-        title:'8.your sex is?', 
+        title:'8.问题?', 
         options:[           
-          {title:'male', target:'9', val: 1},           
-          {title:'male', target:'10', val: 1}           
+          {title:'选项', target:'9', val: 1},           
+          {title:'选项', target:'10', val: 1}           
           ]
       },
-     
       question9: {
-        title:'9.your sex is?', 
+        title:'9.问题?', 
         options:[           
-          {title:'male', target:'10', val: 1},           
-          {title:'male', target:'10', val: 1}           
+          {title:'选项', target:'10', val: 1},           
+          {title:'选项', target:'10', val: 1}           
           ]
       },
      
        question10: {
-        title:'10.your sex is?', 
+        title:'10.问题?', 
         options:[           
-          {title:'male', target:'50', val: 1},           
-          {title:'male', target:'50', val: 1}           
+          {title:'选项', target:'50', val: 1},           
+          {title:'选项', target:'50', val: 1}           
           ]
       },
     });
@@ -96,7 +91,7 @@ module.exports = {
       .exec(function(err, user){
         sails.log.debug(user);
         if(user){
-          return 
+          return;
         }else{
           User.create({name: name, tel: tel, email: email})
           .exec(function(err, data){
@@ -110,4 +105,10 @@ module.exports = {
       })
     }
   },
+
+  middlepage: function(req, res){
+    res.view('middlepage', {
+      layout: 'middlepage'
+    })
+  }
 }
