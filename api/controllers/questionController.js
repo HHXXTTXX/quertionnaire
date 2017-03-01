@@ -8,14 +8,16 @@ module.exports = {
         tel:''
       },
       question1: {
-        title:'1.你的性别是?', 
+        title:'1.你的性别是?',
+        id: '1', 
         options:[
           {title:'男', target:'2', val: 2},
-          {title:'女', target:'2', val: 2}
+          {title:'女', target:'11', val: 2}
           ]
       },
       question2: {
-        title:'2.你的年龄?', 
+        title:'2.你的年龄?',
+        id: '2', 
         options: [
           {title: '20~25', target: "3", val: 1},
           {title: '25~30', target: "3", val: 1},
@@ -23,7 +25,8 @@ module.exports = {
           ]
       },
       question3: {
-        title:'3.是否拥有github账号', 
+        title:'3.是否拥有github账号',
+        id: '3', 
         options:[           
           {title:'是', target:'4', val: 1},           
           {title:'否', target:'5', val: 1}           
@@ -31,6 +34,7 @@ module.exports = {
       },
       question4: {
         title:'4.遇到问题的解决方法?', 
+        id: '4',
         options:[           
           {title:'百度', target:'7', val: -1},           
           {title:'必应', target:'8', val: 1},
@@ -39,20 +43,23 @@ module.exports = {
       },
       question5: {
         title:'5.是否有过相关工作经验?', 
+        id: '5',
         options:[           
           {title:'有', target:'6', val: 1},           
           {title:'没有', target:'9', val: 1}           
           ]
       },
       question6: {
-        title:'6.暗恋谁都快放假啊覅就爱上的发生法律敬爱的老师发空间按楼上的房间爱立方敬爱的老师付款就爱上的浪费空间大师傅?', 
+        title:'6.暗恋谁都快放假啊覅就爱上的发生法律敬爱的老师发空间按楼上的房间爱立方敬爱的老师付款就爱上的浪费空间大师傅?',
+        id: '6', 
         options:[           
           {title:'选项', target:'10', val: 1},           
           {title:'选项', target:'8', val: 1}           
           ]
       },
       question7: {
-        title:'7.问题?', 
+        title:'7.问题?',
+        id: '7', 
         options:[           
           {title:'选项', target:'8', val: 1},           
           {title:'选项', target:'9', val: 1}           
@@ -60,13 +67,15 @@ module.exports = {
       },
       question8: {
         title:'8.问题?', 
+        id: '8',
         options:[           
           {title:'选项', target:'9', val: 1},           
           {title:'选项', target:'10', val: 1}           
           ]
       },
       question9: {
-        title:'9.问题?', 
+        title:'9.问题?',
+        id: '9', 
         options:[           
           {title:'选项', target:'10', val: 1},           
           {title:'选项', target:'10', val: 1}           
@@ -74,7 +83,8 @@ module.exports = {
       },
      
        question10: {
-        title:'10.问题?', 
+        title:'10.问题?',
+        id: '10', 
         options:[           
           {title:'选项', target:'11', val: 1},           
           {title:'选项', target:'11', val: 1}           
@@ -82,7 +92,8 @@ module.exports = {
       },
       question11: {
         title:'11.问题?',
-        target: '13', 
+        target: '13',
+        id: '11', 
         options:[           
           {title:'选项', val: 1},
           {title:'选项', val: 1}, 
@@ -93,7 +104,8 @@ module.exports = {
       },
       question12: {
         title:'12.问题?',
-        target: '14', 
+        target: '14',
+        id: '12', 
         options:[           
           {title:'选项', val: 1},
           {title:'选项', val: 1}, 
@@ -104,7 +116,8 @@ module.exports = {
       },
       question13: {
         title:'13.问题?',
-        target: '50', 
+        target: '50',
+        id: '13', 
         options:[           
           {title:'选项', val: 1},
           {title:'选项', val: 1}, 
@@ -115,7 +128,8 @@ module.exports = {
       },
       question14: {
         title:'14.问题?',
-        target: '50', 
+        target: '50',
+        id: '14', 
         options:[           
           {title:'选项', val: 1},
           {title:'选项', val: 1}, 

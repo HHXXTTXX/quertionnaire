@@ -26,7 +26,7 @@
     .question-title input{margin-left: 47%;}
     div.test{margin-left: 0%;margin-top: 5%;}
     .submit{padding: 10px 10px}
-    label.test{position:absolute;right:60%;}
+    label.test{float: left;right:50%;}
     input.test{position:absolute;right:45%;}
     .submit{position:absolute;right:49%;}
   </style>
@@ -39,6 +39,27 @@
       document.getElementById(h).style="display:none";
       document.getElementById(s).style="display:";
     },500)
+  }
+  var boxcheck = true;
+  function checkval(q, n){
+    var box = document.getElementsByName(n);
+    for(var i=1; i<=box.length;i++){
+      if(box[i-1].checked === false){
+        boxcheck = false;
+      }else{
+        boxcheck = true;
+      }
+    }
+    alert(boxcheck)
+    if(boxcheck === false){
+        alert("请选择选项");
+      }else{
+        setTimeout(function change(){
+          document.getElementById(n).style="display:none";
+          document.getElementById(q).style="display:";
+        },500)
+      }
+    
   }
   </script>
   <div class="default-page">
@@ -54,90 +75,90 @@
           <div id="1" class="question-title">
             <h2 id="second-title"><%= question1.title%></h2><br>
             <% _.each(question1.options, function (options) { %>
-            <input  type="radio" name="q1" onchange="show(<%= options.target %>, 1)" value="<%= options.val %>">  <label><%= options.title %></label><br><br>
+            <input  type="radio" name="<%= question1.id%>" onchange="show(<%= options.target %>, <%= question1.id%>)" value="<%= options.val %>">  <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="2" class="question-title" style="display:none">
             <h2><%= question2.title%></h2><br>
             <% _.each(question2.options, function (options) { %>
-            <input type="radio" name="q2" onchange="show(<%= options.target %>, 2)" value="<%= options.val %>">  <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question2.id%>" onchange="show(<%= options.target %>, <%= question2.id%>)" value="<%= options.val %>">  <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="3" class="question-title" style="display:none">
             <h2><%= question3.title%></h2><br>
             <% _.each(question3.options, function (options) { %>
-            <input type="radio" name="q3" onchange="show(<%= options.target %>, 3)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question3.id%>" onchange="show(<%= options.target %>, <%= question3.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="4" class="question-title" style="display:none">
             <h2 ><%= question4.title%></h2><br>
             <% _.each(question4.options, function (options) { %>
-            <input type="radio" name="q4" onchange="show(<%= options.target %>, 4)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question4.id%>" onchange="show(<%= options.target %>, <%= question4.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="5" class="question-title" style="display:none">
             <h2><%= question5.title%></h2><br>
             <% _.each(question5.options, function (options) { %>
-            <input type="radio" name="q5" onchange="show(<%= options.target %>, 5)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question5.id%>" onchange="show(<%= options.target %>, <%= question5.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="6" class="question-title" style="display:none">
             <h2><%= question6.title%></h2><br>
             <% _.each(question6.options, function (options) { %>
-            <input type="radio" name="q6" onchange="show(<%= options.target %>, 6)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question6.id%>" onchange="show(<%= options.target %>, <%= question6.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="7" class="question-title" style="display:none">
             <h2><%= question7.title%></h2><br>
             <% _.each(question7.options, function (options) { %>
-            <input type="radio" name="q7" onchange="show(<%= options.target %>, 7)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question7.id%>" onchange="show(<%= options.target %>, <%= question7.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="8" class="question-title" style="display:none">
             <h2><%= question8.title%></h2><br>
             <% _.each(question8.options, function (options) { %>
-            <input type="radio" name="q8" onchange="show(<%= options.target %>, 8)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question8.id%>" onchange="show(<%= options.target %>, <%= question8.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="9" class="question-title" style="display:none">
             <h2><%= question9.title%></h2><br>
             <% _.each(question9.options, function (options) { %>
-            <input type="radio" name="q9" onchange="show(<%= options.target %>, 9)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question9.id%>" onchange="show(<%= options.target %>, <%= question9.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="10" class="question-title" style="display:none">
             <h2><%= question10.title%></h2><br>
             <% _.each(question10.options, function (options) { %>
-            <input type="radio" name="q10" onchange="show(<%= options.target %>, 10)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input type="radio" name="<%= question10.id%>" onchange="show(<%= options.target %>, <%= question10.id%>)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
           <div id="11" class="question-title" style="display:none">
             <h2><%= question11.title%></h2><br>
             <% _.each(question11.options, function (options) { %>
-            <input type="checkbox" name="q11" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input  type="checkbox" name="<%= question11.id%>" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
-            <input type="button" value="下一题" onclick="show(<%= question11.target %>, 11)">
+            <input type="button" value="下一题" onclick="checkval(<%= question11.target %>,<%= question11.id%>)">
           </div>
           <div id="12" class="question-title" style="display:none">
             <h2><%= question12.title%></h2><br>
             <% _.each(question12.options, function (options) { %>
-            <input type="checkbox" name="q12" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input  type="checkbox" name="<%= question12.id%>" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
-            <input type="button" value="下一题" onclick="show(<%= question12.target %>, 12)">
+            <input type="button" value="下一题" onclick="checkval(<%= question12.target %>,<%= question12.id%>)">
           </div>
           <div id="13" class="question-title" style="display:none">
             <h2><%= question13.title%></h2><br>
             <% _.each(question13.options, function (options) { %>
-            <input type="checkbox" name="q13" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input  type="checkbox" name="<%= question13.id%>" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
-            <input type="button" value="下一题" onclick="show(<%= question13.target %>, 13)">
+            <input type="button" value="下一题" onclick="checkval(<%= question13.target %>,<%= question13.id%>)">
           </div>
           <div id="14" class="question-title" style="display:none">
             <h2><%= question14.title%></h2><br>
             <% _.each(question14.options, function (options) { %>
-            <input type="checkbox" name="q14" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <input  type="checkbox" name="<%= question14.id%>" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
-            <input type="button" value="下一题" onclick="show(<%= question14.target %>, 14)">
+            <input type="button" value="下一题" onclick="checkval(<%= question14.target %>,<%= question14.id%>)">
           </div>
           <div id="50" class="usermessage" style="display:none" class="test">
             <label class="test">姓名:</label><input class="test" name="userName" type="text" value="" maxlength="20"  placeholder="姓名:" required><br><br>
