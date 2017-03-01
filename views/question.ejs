@@ -40,17 +40,15 @@
       document.getElementById(s).style="display:";
     },500)
   }
-  var boxcheck = true;
+  var boxcheck = false;
   function checkval(q, n){
     var box = document.getElementsByName(n);
     for(var i=1; i<=box.length;i++){
-      if(box[i-1].checked === false){
-        boxcheck = false;
-      }else{
+      if(box[i-1].checked){
         boxcheck = true;
+        break;
       }
     }
-    alert(boxcheck)
     if(boxcheck === false){
         alert("请选择选项");
       }else{
