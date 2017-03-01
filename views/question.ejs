@@ -19,10 +19,10 @@
     div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}
     code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}
     .pocket{display:none;}
-    div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 70%; background-color: #ffe;}
+    div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 63%; background-color: #ffe;}
     div.main-form{margin-left: auto;margin-right: auto;width:80%;}
     div.usermessage{margin-left: 25%;margin-top: 1cm;}
-    div.question-title h2{text-align: center;margin-top: 5%;}
+    div.question-title h2{text-align: center;}
     .question-title input{margin-left: 47%;}
     div.test{margin-left: 0%;margin-top: 5%;}
     .submit{padding: 10px 10px}
@@ -140,9 +140,9 @@
             <input type="button" value="下一题" onclick="show(<%= question14.target %>, 14)">
           </div>
           <div id="50" class="usermessage" style="display:none" class="test">
-            <label class="test">姓名:</label><input class="test" name="userName" type="text" value="" maxlength="20" required><br><br>
-            <label class="test">email:</label><input class="test" name="email" type="email" value="" maxlength="50" required><br><br>
-            <label class="test">联系电话:</label><input class="test" name="tel" type="text" value="" maxlength="11" required>
+            <label class="test">姓名:</label><input class="test" name="userName" type="text" value="" maxlength="20"  placeholder="姓名:" required><br><br>
+            <label class="test">email:</label><input class="test" name="email" type="email" value="" maxlength="50" placeholder="Email:" required><br><br>
+            <label class="test">联系电话:</label><input class="test" name="tel" type="tel" value="" maxlength="11" placeholder="联系电话:" required>
             <div class="submit">
               <br>
               <input class="submit" type="submit" value="提交" onclick="">

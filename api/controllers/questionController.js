@@ -130,9 +130,6 @@ module.exports = {
   },
 
   middlepage: function(req, res){
-    res.view('middlepage', {
-      layout: 'middlepage'
-    })
     var num =_.sum(_.dropRight(_.flattenDeep(_.values(req.query)), 3));
     var name = req.query.userName;
     var tel = req.query.tel;
@@ -143,7 +140,7 @@ module.exports = {
       .exec(function(err, user){
         sails.log.debug(user);
         if(user){
-          return;
+          return res.view('fail', {layout: 'fail'});
         }else{
           User.create({name: name, tel: tel, email: email})
           .exec(function(err, data){
@@ -151,7 +148,7 @@ module.exports = {
               return res.serverError(err);
             }
             sails.log.info('create success');
-            return res.ok();
+            return  res.view('middlepage', {layout: 'middlepage'});
           })
         }
       })
