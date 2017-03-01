@@ -19,10 +19,11 @@
     div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}
     code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}
     .pocket{display:none;}
-    div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 50%; background-color: #ffe;}
+    div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 70%; background-color: #ffe;}
     div.main-form{margin-left: auto;margin-right: auto;width:80%;}
     div.usermessage{margin-left: 25%;margin-top: 1cm;}
-    div.question-title{margin-left: 40%;margin-top: 5%;}
+    div.question-title h2{text-align: center;margin-top: 5%;}
+    .question-title input{margin-left: 47%;}
     div.test{margin-left: 0%;margin-top: 5%;}
     .submit{padding: 10px 10px}
     label.test{position:absolute;right:60%;}
@@ -44,11 +45,12 @@
     <div class="header">
       <h1 id="main-title" class="container"><%= __('问卷调查') %></h1>
     </div>
-    <form id="form1">
+    <form id="form1" action="./middlepage">
       <div class="main-form">
         <br>
         <hr>
         <div class="main">
+          <img src="./images/nasetech.jpg">
           <div id="1" class="question-title">
             <h2 id="second-title"><%= question1.title%></h2><br>
             <% _.each(question1.options, function (options) { %>
@@ -109,13 +111,41 @@
             <input type="radio" name="q10" onchange="show(<%= options.target %>, 10)" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
             <% }) %>
           </div>
+          <div id="11" class="question-title" style="display:none">
+            <h2><%= question11.title%></h2><br>
+            <% _.each(question11.options, function (options) { %>
+            <input type="checkbox" name="q11" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <% }) %>
+            <input type="button" value="下一题" onclick="show(<%= question11.target %>, 11)">
+          </div>
+          <div id="12" class="question-title" style="display:none">
+            <h2><%= question12.title%></h2><br>
+            <% _.each(question12.options, function (options) { %>
+            <input type="checkbox" name="q12" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <% }) %>
+            <input type="button" value="下一题" onclick="show(<%= question12.target %>, 12)">
+          </div>
+          <div id="13" class="question-title" style="display:none">
+            <h2><%= question13.title%></h2><br>
+            <% _.each(question13.options, function (options) { %>
+            <input type="checkbox" name="q13" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <% }) %>
+            <input type="button" value="下一题" onclick="show(<%= question13.target %>, 13)">
+          </div>
+          <div id="14" class="question-title" style="display:none">
+            <h2><%= question14.title%></h2><br>
+            <% _.each(question14.options, function (options) { %>
+            <input type="checkbox" name="q14" onchange="" value="<%= options.val %>"> <label><%= options.title %></label><br><br>
+            <% }) %>
+            <input type="button" value="下一题" onclick="show(<%= question14.target %>, 14)">
+          </div>
           <div id="50" class="usermessage" style="display:none" class="test">
             <label class="test">姓名:</label><input class="test" name="userName" type="text" value="" maxlength="20" required><br><br>
             <label class="test">email:</label><input class="test" name="email" type="email" value="" maxlength="50" required><br><br>
             <label class="test">联系电话:</label><input class="test" name="tel" type="text" value="" maxlength="11" required>
             <div class="submit">
               <br>
-              <input class="submit" type="submit" value="提交" id="submit" onclick="">
+              <input class="submit" type="submit" value="提交" onclick="">
             </div>
           </div>
         </div>

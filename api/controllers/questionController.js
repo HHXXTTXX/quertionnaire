@@ -34,7 +34,7 @@ module.exports = {
         options:[           
           {title:'百度', target:'7', val: -1},           
           {title:'必应', target:'8', val: 1},
-          {title:'google', target:'8', val: 2}           
+          {title:' google', target:'8', val: 2}           
           ]
       },
       question5: {
@@ -45,7 +45,7 @@ module.exports = {
           ]
       },
       question6: {
-        title:'6.?', 
+        title:'6.暗恋谁都快放假啊覅就爱上的发生法律敬爱的老师发空间按楼上的房间爱立方敬爱的老师付款就爱上的浪费空间大师傅?', 
         options:[           
           {title:'选项', target:'10', val: 1},           
           {title:'选项', target:'8', val: 1}           
@@ -76,12 +76,64 @@ module.exports = {
        question10: {
         title:'10.问题?', 
         options:[           
-          {title:'选项', target:'50', val: 1},           
-          {title:'选项', target:'50', val: 1}           
+          {title:'选项', target:'11', val: 1},           
+          {title:'选项', target:'11', val: 1}           
           ]
       },
+      question11: {
+        title:'11.问题?',
+        target: '13', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+      question12: {
+        title:'12.问题?',
+        target: '14', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+      question13: {
+        title:'13.问题?',
+        target: '50', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+      question14: {
+        title:'14.问题?',
+        target: '50', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+
     });
-    var num =_.sum(_.dropRight(_.values(req.query), 3));
+   
+  },
+
+  middlepage: function(req, res){
+    res.view('middlepage', {
+      layout: 'middlepage'
+    })
+    var num =_.sum(_.dropRight(_.flattenDeep(_.values(req.query)), 3));
     var name = req.query.userName;
     var tel = req.query.tel;
     var email = req.query.email;
@@ -104,11 +156,5 @@ module.exports = {
         }
       })
     }
-  },
-
-  middlepage: function(req, res){
-    res.view('middlepage', {
-      layout: 'middlepage'
-    })
   }
 }
