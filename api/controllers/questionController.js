@@ -11,8 +11,9 @@ module.exports = {
         title:'1.你的性别是?',
         id: '1', 
         options:[
-          {title:'男', target:'2', val: 2},
-          {title:'女', target:'11', val: 2}
+          {title:'男', target:'50', val: 2},
+          {title:'女', target:'24', val: 2},
+          {title:'额', target:'２', val: 2},
           ]
       },
       question2: {
@@ -211,11 +212,11 @@ module.exports = {
         target: '50',
         id: '24', 
         options:[           
-          {title:'选项', val: 1},
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1},            
-          {title:'选项', val: 1}           
+          {title:'选项阿萨德', val: 1},
+          {title:'选项等等', val: 1}, 
+          {title:'选项大师傅', val: 1}, 
+          {title:'选项发生的', val: 1},            
+          {title:'选项阿斯蒂芬', val: 1}           
           ]
       },
      
@@ -246,6 +247,9 @@ module.exports = {
           })
         }
       })
+    }else{
+      sails.log.info('success');
+      return  res.view('middlepage', {layout: 'middlepage'});
     }
   }
 }

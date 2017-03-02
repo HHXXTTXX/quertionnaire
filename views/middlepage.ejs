@@ -17,9 +17,9 @@
     .pocket{display:none;}
     div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 60%; background-color: #ffe;}
     div.thank{margin-top: 5%; text-align: center}
-    div.goback{position:absolute;right:48%;}
     div.main-box{margin-left: auto;margin-right: auto;width:80%;}
   </style>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <script type="text/javascript">
   setTimeout(function sunrise () {
     document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
@@ -28,6 +28,7 @@
     window.location.href="./question"
   }
   </script>
+  
   <div class="default-page">
     <div class="header">
       <h1 id="main-title" class="container"><label><%= __('问卷调查') %></label></h1>
@@ -40,10 +41,11 @@
         <div class="thank">
         <h2><label>纳舍科技感谢您的调查</label></h2>
         </div>
-        <div class="goback">
-          <br>
-          <input type="submit" name="submit" value="返回首页" onclick="change()">
-        </div>      
+        <div class="form-group">
+          <div class="col-lg-offset-5">
+            <button type="submit" class="btn col-lg-offset-1 btn-default btn-md btn-default" onclick="change()">返回首页</button>
+          </div>
+        </div>    
       </div>
     </div>
   </div>
