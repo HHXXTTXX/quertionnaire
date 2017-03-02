@@ -13,7 +13,7 @@ module.exports = {
         options:[
           {title:'男', target:'50', val: 2},
           {title:'女', target:'24', val: 2},
-          {title:'娚', target:'２', val: 2},
+          {title:'娚', target:'2', val: 2},
           ]
       },
       question2: {
