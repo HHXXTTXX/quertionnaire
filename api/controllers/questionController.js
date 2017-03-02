@@ -82,7 +82,7 @@ module.exports = {
           ]
       },
      
-       question10: {
+      question10: {
         title:'10.问题?',
         id: '10', 
         options:[           
@@ -90,46 +90,90 @@ module.exports = {
           {title:'选项', target:'11', val: 1}           
           ]
       },
-      question11: {
+       question11: {
         title:'11.问题?',
-        target: '12',
         id: '11', 
         options:[           
-          {title:'选项', val: 1},
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1},            
-          {title:'选项', val: 1}           
+          {title:'选项', target:'11', val: 1},           
+          {title:'选项', target:'12', val: 1}           
           ]
       },
       question12: {
         title:'12.问题?',
-        target: '13',
         id: '12', 
         options:[           
-          {title:'选项', val: 1},
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1},            
-          {title:'选项', val: 1}           
+          {title:'选项', target:'13', val: 1},           
+          {title:'选项', target:'13', val: 1}           
           ]
       },
       question13: {
         title:'13.问题?',
-        target: '14',
         id: '13', 
         options:[           
-          {title:'选项', val: 1},
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1}, 
-          {title:'选项', val: 1},            
-          {title:'选项', val: 1}           
+          {title:'选项', target:'14', val: 1},           
+          {title:'选项', target:'14', val: 1}           
           ]
       },
       question14: {
         title:'14.问题?',
-        target: '50',
         id: '14', 
+        options:[           
+          {title:'选项', target:'15', val: 1},           
+          {title:'选项', target:'15', val: 1}           
+          ]
+      },
+      question15: {
+        title:'15.问题?',
+        id: '15', 
+        options:[           
+          {title:'选项', target:'16', val: 1},           
+          {title:'选项', target:'16', val: 1}           
+          ]
+      },
+        question16: {
+        title:'16.问题?',
+        id: '16', 
+        options:[           
+          {title:'选项', target:'17', val: 1},           
+          {title:'选项', target:'17', val: 1}           
+          ]
+      },
+      question17: {
+        title:'17.问题?',
+        id: '17', 
+        options:[           
+          {title:'选项', target:'18', val: 1},           
+          {title:'选项', target:'18', val: 1}           
+          ]
+      },
+      question18: {
+        title:'18.问题?',
+        id: '18', 
+        options:[           
+          {title:'选项', target:'19', val: 1},           
+          {title:'选项', target:'19', val: 1}           
+          ]
+      },
+      question19: {
+        title:'19.问题?',
+        id: '19', 
+        options:[           
+          {title:'选项', target:'20', val: 1},           
+          {title:'选项', target:'20', val: 1}           
+          ]
+      },
+      question20: {
+        title:'20.问题?',
+        id: '20', 
+        options:[           
+          {title:'选项', target:'21', val: 1},           
+          {title:'选项', target:'21', val: 1}           
+          ]
+      },
+      question21: {
+        title:'21.问题?',
+        target: '22',
+        id: '21', 
         options:[           
           {title:'选项', val: 1},
           {title:'选项', val: 1}, 
@@ -138,7 +182,43 @@ module.exports = {
           {title:'选项', val: 1}           
           ]
       },
-
+      question22: {
+        title:'22.问题?',
+        target: '23',
+        id: '22', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+      question23: {
+        title:'23.问题?',
+        target: '24',
+        id: '23', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+      question24: {
+        title:'24.问题?',
+        target: '50',
+        id: '24', 
+        options:[           
+          {title:'选项', val: 1},
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1}, 
+          {title:'选项', val: 1},            
+          {title:'选项', val: 1}           
+          ]
+      },
+     
     });
    
   },
