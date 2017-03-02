@@ -21,13 +21,13 @@
     .pocket{display:none;}
     div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 63%; background-color: #ffe;}
     div.main-form{margin-left: auto;margin-right: auto;width:80%;}
-    div.usermessage{margin-left: 25%;margin-top: 1cm;}
+    div.usermessage{margin-left: 30%;margin-top: 1cm;}
     div.question-title h2{text-align: center;}
     .question-title input{margin-left: 47%;}
     div.test{margin-left: 0%;margin-top: 5%;}
     .submit{padding: 10px 10px}
-    label.test{float: left;right:50%;}
-    input.test{position:absolute;right:45%;}
+    label.test{position:absolute;}
+    input.test{position:absolute;right:42%;}
     .submit{position:absolute;right:49%;}
   </style>
   <script type="text/javascript">
@@ -56,6 +56,7 @@
           document.getElementById(n).style="display:none";
           document.getElementById(q).style="display:";
         },500)
+        boxcheck = false;
       }
     
   }

@@ -92,7 +92,7 @@ module.exports = {
       },
       question11: {
         title:'11.问题?',
-        target: '13',
+        target: '12',
         id: '11', 
         options:[           
           {title:'选项', val: 1},
@@ -104,7 +104,7 @@ module.exports = {
       },
       question12: {
         title:'12.问题?',
-        target: '14',
+        target: '13',
         id: '12', 
         options:[           
           {title:'选项', val: 1},
@@ -116,7 +116,7 @@ module.exports = {
       },
       question13: {
         title:'13.问题?',
-        target: '50',
+        target: '14',
         id: '13', 
         options:[           
           {title:'选项', val: 1},
