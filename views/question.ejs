@@ -90,9 +90,10 @@
     }
   }
   </script>
+  <!-- 回退刷新-->
   <input type="hidden" id="refreshed" value="no">
+   <!-- 弹窗内容 -->
   <div id="myModal" class="modal">
-    <!-- 弹窗内容 -->
     <div class="modal-content">
 	    <span class="close">&times;</span>
       <div class="modal-body">
@@ -103,7 +104,7 @@
   <div class="default-page">
     <div class="header">
       <!-- 标题内容 -->
-      <h1 id="main-title" class="container"><%= __('问卷调查') %></h1>
+      <h1 id="main-title" class="container"><label><%= __('问卷调查') %></label></h1>
     </div>
     <form id="form1" class="form-horizontal" action="./middlepage">
     <!-- 表单内容 -->
