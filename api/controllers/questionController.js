@@ -229,12 +229,11 @@ module.exports = {
     var name = req.query.userName;
     var tel = req.query.tel;
     var email = req.query.email;
-    sails.log.debug(req.query,num);
     if(num > 1){
       User.findOne({name: name, tel: tel, email: email})
       .exec(function(err, user){
-        sails.log.debug(user);
         if(user){
+          sails.log.debug(user);
           return res.view('fail', {layout: 'fail'});
         }else{
           User.create({name: name, tel: tel, email: email})
