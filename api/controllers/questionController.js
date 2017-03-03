@@ -241,6 +241,7 @@ module.exports = {
             if(err){
               return res.serverError(err);
             }
+            sails.log.info(data);
             sails.log.info('create success');
             return  res.view('middlepage', {layout: 'middlepage'});
           })
