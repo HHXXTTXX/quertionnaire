@@ -79,7 +79,18 @@
       boxcheck = false;
     }
   }
+  onload=function(){
+    var e = document.getElementById("refreshed");
+    if(e.value=="no"){
+      e.value="yes";
+    }
+    else{
+      e.value="no";
+      location.reload();
+    }
+  }
   </script>
+  <input type="hidden" id="refreshed" value="no">
   <div id="myModal" class="modal">
     <!-- 弹窗内容 -->
     <div class="modal-content">
@@ -362,7 +373,7 @@
             <div class="form-group">
               <label for="tel" class="col-md-2 control-label">telephone:</label>
               <div class="col-md-10">
-                <input type="text" name="tel" class="form-control" id="tel" placeholder="联系方式" required>
+                <input type="text" name="tel" class="form-control" id="tel" placeholder="联系方式" maxlength="11" minlength="11" required>
               </div>
             </div>
             <div class="form-group">
