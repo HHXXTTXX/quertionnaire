@@ -33,9 +33,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'index',
-    user:{
-      name: '123'
+    view: 'views/question',
+    locals:{
+      layout: 'views'
     }
   },
   'get /question': 'questionController.question',

@@ -12,8 +12,7 @@ module.exports = {
         id: '1', 
         options:[
           {title:'男', target:'50', val: 2},
-          {title:'女', target:'24', val: 2},
-          {title:'娚', target:'2', val: 2},
+          {title:'女', target:'2', val: 2},
           ]
       },
       question2: {
@@ -37,9 +36,9 @@ module.exports = {
         title:'4.遇到问题的解决方法?', 
         id: '4',
         options:[           
-          {title:'百度', target:'7', val: -1},           
+          {title:'百度', target:'24', val: -3},           
           {title:'必应', target:'8', val: 1},
-          {title:' google', target:'8', val: 2}           
+          {title:' google', target:'8', val: 3}           
           ]
       },
       question5: {
@@ -51,7 +50,7 @@ module.exports = {
           ]
       },
       question6: {
-        title:'6.暗恋谁都快放假啊覅就爱上的发生法律敬爱的老师发空间按楼上的房间爱立方敬爱的老师付款就爱上的浪费空间大师傅?',
+        title:'6.问题?',
         id: '6', 
         options:[           
           {title:'选项', target:'10', val: 1},           
@@ -212,7 +211,7 @@ module.exports = {
         target: '50',
         id: '24', 
         options:[           
-          {title:'选项阿萨德', val: 1},
+          {title:'选项', val: 1},
           {title:'选项等等', val: 1}, 
           {title:'选项大师傅', val: 1}, 
           {title:'选项发生的', val: 1},            
