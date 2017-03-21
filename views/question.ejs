@@ -4,95 +4,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-    <style>
-      /* Styles included inline since you'll probably be deleting this page anyway */
-      html,body{
-        text-align:left;font-size:1em
-        }
-      html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h2,h4,h5,h6,pre,code{margin:0;padding:0}
-      *:active,*:focus{outline:0;-moz-outline-style:none}
-      h1,h2,h2,h4,h5,h6{font-weight:normal}
-      div.clear{clear:both}
-      .clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
-      body{font-family:"Open Sans",Arial,sans-serif;font-weight:300;}
-      .container{margin: auto;}
-      div.header {text-align: center;-webkit-transition: 6s; -moz-transition: 6s; -o-transition: 6s;transition: 6s; background: rgba(0, 36, 41, 0.89)  no-repeat 42% bottom; padding: 70px  0px;}
-      .header h1#main-title{color: #fff; font-weight: 300; font-size: 2.5em;text-align: center;}
-      .header h2{color: #b1eef7; font-style: italic; font-weight: 300;text-align: center;}
-      .header h2 code{text-align: center;font-style: normal!important; background-color: rgba(255,255,255,0.5); font-weight: 300; color:#0e6471; margin: 0px 5px;}
-      code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}
-      .pocket{display:none;}
-      div.main{margin-left: auto;margin-right: auto;border-style:solid;border-radius: 16px;border-color: #ccc; border-width: 2px;height: 400px; background-color: #ffe;}
-      div.main-form{margin-left: auto;margin-right: auto;width:80%;}
-      div.usermessage{margin-left: 30%;margin-top: 1cm;margin-right: 30%;}
-    /* 弹窗 (background) */
-      .modal {display: none; /* 默认隐藏 */text-align: center;position: fixed; z-index: 1; padding-top: 200px; left: 0;top: 0;
-      width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
-      /* 弹窗内容 */
-      .modal-content {position: relative;background-color: #fefefe;margin: auto;padding: 0;border: 1px solid #888;
-      width: 80%;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);-webkit-animation-name: animatetop;
-      -webkit-animation-duration: 0.4s;animation-name: animatetop;animation-duration: 0.4s}
-      /* 添加动画 */
-      @-webkit-keyframes animatetop {from {top:-300px; opacity:0} to {top:0; opacity:1}}
-      @keyframes animatetop {from {top:-300px; opacity:0}to {top:0; opacity:1}}
-      /* 关闭按钮 */
-      .close {color: black;float: right;font-size: 28px;font-weight: bold;}
-      .close:hover,
-      .close:focus {color: #000;text-decoration: none;cursor: pointer;}
-      .modal-body {padding: 2px 16px;}
-    </style>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript">
-      setTimeout(function sunrise () {
-        document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
-      }, 0);
-      function show(s, h) {
-        setTimeout(function change(){
-          document.getElementById(h).style="display:none";
-          document.getElementById(s).style="display:";
-        },500)
-      }
-      var boxcheck = false;
-      function checkval(q, n){
-        var box = document.getElementsByName(n);
-        // 获取弹窗
-        var modal = document.getElementById('myModal');
-        // 获取 <span> 元素，用于关闭弹窗 that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        for(var i=1; i<=box.length;i++){
-          if(box[i-1].checked){
-            boxcheck = true;
-            break;
-          }
-        }
-        if(boxcheck === false){
-          modal.style.display = "block";
-          span.onclick = function() {
-            modal.style.display = "none";
-          }
-          window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-          }
-        }else{
-          setTimeout(function change(){
-            document.getElementById(n).style="display:none";
-            document.getElementById(q).style="display:";
-          },500)
-          boxcheck = false;
-        }
-      }
-      onload=function(){
-        var e = document.getElementById("refreshed");
-        if(e.value=="no"){
-          e.value="yes";
-        }
-        else{
-          e.value="no";
-          location.reload();
-        }
-      }
+    <link rel="stylesheet" href="styles/question.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script language="JavaScript" src="js/question.js">
     </script>
   </head>
   <body>
